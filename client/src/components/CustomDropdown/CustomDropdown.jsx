@@ -56,9 +56,6 @@ export default function CustomDropdown({ location, closeNavbar }) {
             <Button as={Link} to="archivos" className="custom-button" onClick={() => handleLinkClick('archivos')}>
                 <FontAwesomeIcon icon={faFile} />Documentos Administrativos
             </Button>
-            <Button as={Link} to="asistente-virtual" className="custom-button" onClick={() => handleLinkClick('asistente-virtual')}>
-                <FontAwesomeIcon icon={faComments} /> Asistente Virtual
-            </Button>
 
             {/* Menú desplegable para la sección de Perfiles */}
             <Dropdown onClick={() => handleToggle('dropdown-admin-perfiles')} className={openDropdown === 'dropdown-admin-perfiles' ? 'dropdown-open' : ''}>

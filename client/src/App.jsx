@@ -70,7 +70,6 @@ function App() {
                         <Route path='alimentacion' element={<Feeding/>}/> {/* Página de alimentación */}
                         <Route path='imagenes' element={<Gallery/>}/> {/* Página de galería */}
                         <Route path='archivos' element={<AdminDocuments/>}/> {/* Página de documentos administrativos */}
-                        <Route path='asistente-virtual' element={<VirtualAssistant/>}/> {/* Página del asistente virtual */}
                         <Route path='mensajeria' element={<Messaging/>}/> {/* Página de mensajería */}
                     </Route>
                 </Routes>

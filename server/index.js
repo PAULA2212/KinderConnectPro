@@ -25,5 +25,8 @@ app.use(bodyParser.json()); // Para parsear JSON
 // Define el prefijo '/api' para todas las rutas en el router importado; todas las rutas en `router` estarán bajo `/api`
 app.use('/api', router);
 
-// Inicia el servidor en el puerto 4000 y muestra un mensaje en la consola cuando el servidor está activo y escuchando
-app.listen(4000, () => console.log('Servidor escuchando en el puerto 4000'));
+// Define el puerto usando la variable de entorno `PORT` proporcionada por Render, o usa 4000 como valor por defecto para desarrollo local.
+const PORT = process.env.PORT || 4000;
+
+// Inicia el servidor en el puerto configurado y muestra un mensaje en la consola
+app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
