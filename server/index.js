@@ -30,3 +30,4 @@ const PORT = process.env.PORT || 4000;
 
 // Inicia el servidor en el puerto configurado y muestra un mensaje en la consola
 app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
+
