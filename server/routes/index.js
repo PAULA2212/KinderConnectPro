@@ -52,7 +52,6 @@ const uploadKidFile = require('../controllers/adminDocuments/uploadKidDocumentCo
 const getDocumentById = require('../controllers/adminDocuments/getDocumentByIdController'); // Controlador para obtener documento por ID
 const getDocumentByLink = require('../controllers/adminDocuments/getDocumentByLinkController'); // Controlador para obtener documento por enlace
 const deleteDocument = require('../controllers/adminDocuments/deleteDocumentController'); // Controlador para eliminar documentos
-const virtualAssintant = require('../controllers/virtualAssistant/virtualAssistantController'); // Controlador para asistente virtual
 const getPotentialRecipients = require('../controllers/messaging/getRecipientController'); // Controlador para obtener destinatarios potenciales
 const saveMessage = require('../controllers/messaging/addMessageController'); // Controlador para guardar mensajes
 const getInbox = require('../controllers/messaging/getInboxController'); // Controlador para obtener mensajes de entrada
@@ -109,7 +108,6 @@ router.post('/addDocumentForKid', upload.single('documento'), uploadKidFile); //
 router.get('/getDocumentById/:id/:type', getDocumentById); // Ruta para obtener un documento por ID
 router.get('/getDocumentByLink/:id/:type', getDocumentByLink); // Ruta para obtener un documento por enlace
 router.delete('/deleteDocument/:id/:type', deleteDocument); // Ruta para eliminar un documento
-router.post('/virtualAssistant', virtualAssintant); // Ruta para interactuar con el asistente virtual
 router.get('/getPotentialRecipients/:id/:type', getPotentialRecipients); // Ruta para obtener destinatarios potenciales
 router.post('/savemessage', saveMessage); // Ruta para guardar un mensaje
 router.get('/getInbox/:id', getInbox); // Ruta para obtener la bandeja de entrada
