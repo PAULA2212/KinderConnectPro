@@ -22,6 +22,11 @@ app.use(cors());
 // Usa body-parser para transformar los datos del cuerpo de las solicitudes en objetos JSON accesibles desde req.body
 app.use(bodyParser.json()); // Para parsear JSON
 
+// Define una ruta raíz para comprobar que el servidor está funcionando
+app.get('/', (req, res) => {
+  res.send('¡Servidor funcionando correctamente!');
+});
+
 // Define el prefijo '/api' para todas las rutas en el router importado; todas las rutas en `router` estarán bajo `/api`
 app.use('/api', router);
 
@@ -30,4 +35,3 @@ const PORT = process.env.PORT || 4000;
 
 // Inicia el servidor en el puerto configurado y muestra un mensaje en la consola
 app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT}`));
-
